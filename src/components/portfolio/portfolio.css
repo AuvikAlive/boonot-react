@@ -1,0 +1,154 @@
+#portfolio .content {
+  position: relative;
+  top: 50%;
+}
+
+.owl-carousel {
+  opacity: 0;
+  transition: opacity .5s ease;
+  text-align: center;
+  transform: translateX(0) translateY(-50%);
+}
+
+.owl-item div {
+  position: relative;
+  margin: 0 auto;
+}
+
+.owl-item div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.owl-item div a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100.07%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  transition: all .5s ease;
+}
+
+.owl-item div:hover a {
+  background: #2bb29d;
+  opacity: 1;
+}
+
+.owl-item div h1 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+
+.owl-item div h1::after {
+  content: "Visit Site";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  font-size: 1.5vw;
+  font-weight: 400;
+  transform: translateX(-50%) translateY(0);
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.owl-nav .svg-icon {
+  transition: all .3s ease;
+}
+
+.owl-nav .svg-icon:first-of-type {
+  margin-right: 0.5vw;
+}
+
+.owl-nav .svg-icon:last-of-type {
+  margin-left: 0.5vw;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #2bb29d;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease;
+  opacity: 1;
+}
+
+@media all and (orientation: landscape) {
+  .owl-item div {
+    width: 50vw;
+    height: 28.125vw;
+  }
+
+  .owl-item div h1 {
+    font-size: 2.5vw;
+  }
+
+  .owl-item div h1::after {
+    font-size: 1.5vw;
+  }
+
+  .owl-nav .svg-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  .owl-nav .svg-icon:hover {
+    transform: scale(2);
+  }
+}
+
+@media all and (orientation: portrait) {
+  .owl-item div {
+    width: 90vw;
+    height: 50.625vw;
+  }
+
+  .owl-nav .svg-icon {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .owl-nav .svg-icon:first-of-type {
+    margin-right: 1vw;
+  }
+
+  .owl-nav .svg-icon:last-of-type {
+    margin-left: 1vw;
+  }
+
+  .owl-item div h1 {
+    font-size: 7vw;
+  }
+
+  .owl-item div h1::after {
+    font-size: 5vw;
+  }
+}
